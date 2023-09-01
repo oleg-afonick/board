@@ -1,0 +1,15 @@
+{% extends 'flatpages/default.html' %}
+{% block title %}
+Comment
+{% endblock title %}
+
+{% block content %}
+
+<h1>{{ com.post}}</h1>
+<h1>{{ com.user}}</h1>
+<h4>{{ com.comment_text }}</h4>
+
+<a href="{% url 'agreed' %}">Принять</a>
+<a href="{% url 'com_delete' com.id %}">Отклонить</a>
+
+{% endblock content %}
